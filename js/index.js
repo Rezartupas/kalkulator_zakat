@@ -6,7 +6,7 @@ document.getElementById('zakatForm').addEventListener('submit', function(e) {
     const zakatType = document.getElementById('jenisZakat').value;
   
     let zakatAmount = 0;
-    const hargaEmas = 1410000; // Harga emas per gram (contoh)
+    const hargaEmas = 1247259; // Harga emas per gram (contoh)
   
     // Menghitung zakat maal berdasarkan jenis zakat yang dipilih
     if (zakatType === 'penghasilan' || zakatType === 'tabungan') {
