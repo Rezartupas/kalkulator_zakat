@@ -6,19 +6,24 @@ document.getElementById('zakatForm').addEventListener('submit', function(e) {
     const zakatType = document.getElementById('jenisZakat').value;
   
     let zakatAmount = 0;
+    const hargaEmas = 1410000; // Harga emas per gram (contoh)
   
     // Menghitung zakat maal berdasarkan jenis zakat yang dipilih
     if (zakatType === 'penghasilan' || zakatType === 'tabungan') {
       zakatAmount = (totalAssets - expenses) * 0.025;
     } else if (zakatType === 'emas') {
-      // Asumsikan harga emas dalam IDR per gram
-      const hargaEmas = 1410000; 
       zakatAmount = (totalAssets / hargaEmas) * 0.025 * hargaEmas;
     } else if (zakatType === 'perdagangan') {
       zakatAmount = (totalAssets - expenses) * 0.025;
     }
   
-    // Update hasil perhitungan
-    document.getElementById('zakatAmount').textContent = zakatAmount.toLocaleString() + " IDR";
+    // Cek apakah zakatAmount kurang dari nisab (12 kali harga emas)
+    const nisab = hargaEmas * 12;
+    if (zakatAmount < nisab) {
+      alert("Belum Wajib Zakat");
+    } else {
+      // Update hasil perhitungan jika memenuhi syarat zakat
+      document.getElementById('zakatAmount').textContent = zakatAmount.toLocaleString() + " IDR";
+    }
   });
   
