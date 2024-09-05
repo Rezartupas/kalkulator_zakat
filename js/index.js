@@ -18,7 +18,7 @@ document.getElementById('zakatForm').addEventListener('submit', function(e) {
     }
   
     // Cek apakah zakatAmount kurang dari nisab (12 kali harga emas)
-    const nisab = hargaEmas * 12;
+    const nisab = hargaEmas * 85;
     if (zakatAmount < nisab) {
       alert("Belum wajib zakat nih, sedekah aja ya?");
     } else {
