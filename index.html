@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zakat Maal Calculator</title>
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <img src="assets/logo.png" alt="Zakat Maal Logo" class="logo">
+      <h1>Perhitungan Zakat Maal</h1>
+      <p>Zakat maal sebesar 2,5% dari total harta</p>
+      <form id="zakatForm">
+        <label for="totalAssets">Total Harta (IDR):</label>
+        <input type="number" id="totalAssets" placeholder="Masukkan total harta">
+        
+        <button type="submit">Hitung Zakat</button>
+      </form>
+      <div id="result">
+        <h2>Zakat yang harus dibayar:</h2>
+        <p id="zakatAmount">0 IDR</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
