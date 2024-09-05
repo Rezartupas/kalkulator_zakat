@@ -3,25 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zakat Maal Calculator</title>
+  <title>Kalkulator Zakat</title>
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
   <div class="container">
-    <div class="card">
-        <img src="assets/logo.png" alt="Zakat Maal Logo" class="logo">
-      <h1>Perhitungan Zakat Maal</h1>
-      <p>Zakat maal sebesar 2,5% dari total harta</p>
-      <form id="zakatForm">
-        <label for="totalAssets">Total Harta (IDR):</label>
-        <input type="number" id="totalAssets" placeholder="Masukkan total harta">
-        
-        <button type="submit">Hitung Zakat</button>
-      </form>
-      <div id="result">
-        <h2>Zakat yang harus dibayar:</h2>
-        <p id="zakatAmount">0 IDR</p>
-      </div>
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    <h1>Kalkulator Zakat Maal</h1>
+    <form id="zakatForm">
+      <label for="jenisZakat">Pilih Jenis Zakat:</label>
+      <select id="jenisZakat">
+        <option value="penghasilan">Zakat Penghasilan</option>
+        <option value="tabungan">Zakat Tabungan</option>
+        <option value="emas">Zakat Emas</option>
+        <option value="perdagangan">Zakat Perdagangan</option>
+      </select>
+      
+      <label for="totalAssets">Total Pendapatan/Besaran Harta (IDR):</label>
+      <input type="number" id="totalAssets" placeholder="Masukkan jumlah harta">
+
+      <label for="expenses">Pengeluaran Pokok (IDR):</label>
+      <input type="number" id="expenses" placeholder="Masukkan pengeluaran pokok">
+
+      <button type="submit">Hitung Zakat</button>
+    </form>
+
+    <div id="result">
+      <h2>Zakat yang harus dibayar:</h2>
+      <p id="zakatAmount">0 IDR</p>
     </div>
   </div>
 
