@@ -20,7 +20,7 @@ document.getElementById('zakatForm').addEventListener('submit', function(e) {
     // Cek apakah zakatAmount kurang dari nisab (12 kali harga emas)
     const nisab = hargaEmas * 12;
     if (zakatAmount < nisab) {
-      alert("Belum Wajib Zakat");
+      alert("Belum wajib zakat nih, sedekah aja ya?");
     } else {
       // Update hasil perhitungan jika memenuhi syarat zakat
       document.getElementById('zakatAmount').textContent = zakatAmount.toLocaleString() + " IDR";
