@@ -6,7 +6,7 @@ document.getElementById('zakatForm').addEventListener('submit', function(e) {
     const zakatType = document.getElementById('jenisZakat').value;
   
     let zakatAmount = 0;
-    const hargaEmas = 1247259; // Harga emas per gram (contoh)
+    const hargaEmas = 1247259; // Harga emas per gram
   
     // Menghitung zakat maal berdasarkan jenis zakat yang dipilih
     if (zakatType === 'penghasilan' || zakatType === 'tabungan') {
@@ -17,7 +17,7 @@ document.getElementById('zakatForm').addEventListener('submit', function(e) {
       zakatAmount = (totalAssets - expenses) * 0.025;
     }
   
-    // Cek apakah zakatAmount kurang dari nisab (12 kali harga emas)
+    // Cek apakah zakatAmount kurang dari nisab (85 kali harga emas)
     const nisab = hargaEmas * 85;
     if (zakatAmount < nisab) {
       alert("Belum wajib zakat nih, sedekah aja ya?");
